@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+		<title></title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  	<style type="text/css">
+		#webpreloader_auto {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99999;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    display: flex;
+}
+.loader_auto {
+    margin: auto;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: relative;
+}
+.loader_auto:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    border-radius: 50%;
+    opacity: 0;
+    animation: popin 1.5s linear infinite 0s;
+}
+.loader_auto:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    border-radius: 50%;
+    opacity: 0;
+    animation: popin 1.5s linear infinite 0.5s;
+}
+
+@keyframes popin{
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+    1%{
+        opacity: 0.1;
+        transform: scale(0);
+    }
+    99%{
+        opacity: 0;
+        transform: scale(2);
+    }
+    100%{
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+	</style>
+</head>
+<body>
+<div id="webpreloader_auto">
+        <div class="loader_auto"></div>
+    </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
